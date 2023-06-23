@@ -16,7 +16,7 @@ setPluginConfigurationDefaults({
 });
 
 export const config: Config = {
-  namespace: 'stencil-library',
+  namespace: 'reputex-stencil-library',
   plugins: [tailwind(), tailwindHMR()],
   devServer: {
     reloadStrategy: 'pageReload',
@@ -37,11 +37,11 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
     reactOutputTarget({
-      componentCorePackage: 'stencil-library',
+      componentCorePackage: 'reputex-stencil-library',
       proxiesFile: '../reputex-react-widget/lib/components/stencil-generated/index.ts',
     }),
     vueOutputTarget({
-      componentCorePackage: 'stencil-library',
+      componentCorePackage: 'reputex-stencil-library',
       proxiesFile: '../reputex-vue-widget/lib/components.ts',
     }),
   ],

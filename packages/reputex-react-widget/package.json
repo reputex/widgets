@@ -1,5 +1,5 @@
 {
-  "name": "@reputex/react-widget-v2",
+  "name": "reputex-react-widget",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "avk <aditya@nordfinance.io>",
@@ -24,7 +24,7 @@
     "tsc": "tsc -p ."
   },
   "dependencies": {
-    "stencil-library": "*"
+    "reputex-stencil-library": "*"
   },
   "devDependencies": {
     "@types/react": "^18.2.13",

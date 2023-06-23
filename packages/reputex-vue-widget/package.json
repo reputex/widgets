@@ -23,7 +23,7 @@
     "access": "public"
   },
   "dependencies": {
-    "stencil-library": "*"
+    "reputex-stencil-library": "*"
   },
   "devDependencies": {
     "vue": "3"

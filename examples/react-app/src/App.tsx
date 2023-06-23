@@ -1,7 +1,7 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { MyButton, defineCustomElements } from "@reputex/react-widget-v2";
+import { MyButton, defineCustomElements } from "reputex-react-widget";
 
 defineCustomElements();
 
