@@ -1,0 +1,31 @@
+{
+  "name": "reputex-vue-widget",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "avk <aditya@nordfinance.io>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "npm run tsc",
+    "tsc": "tsc -p ."
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "reputex-stencil-library": "*"
+  },
+  "devDependencies": {
+    "vue": "3"
+  }
+}
