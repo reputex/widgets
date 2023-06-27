@@ -1,0 +1,52 @@
+:host {
+  display: block;
+}
+
+.outer-div-p{
+  border-radius: 0.5rem;
+  background-image: linear-gradient(to right, #00FFFF, #8A76FF, #FF00FF);
+  background-color: #00FFFF;
+  width: 354px;
+  height: 284px;
+  padding: 0.2rem;
+}
+
+.circleRight {
+  padding: 8px;
+  animation: scaling 1s infinite;
+}
+
+.rectangleTop {
+  padding: 16px;
+  animation: scaling 1s infinite 0.2s;
+}
+
+.rectangleLeft {
+  padding: 8px;
+  animation: scaling 1s infinite;
+}
+
+.rectangleMiddle {
+  padding: 8px;
+  animation: scaling 1s infinite 0.2s;
+}
+
+.rectangleRight {
+  padding: 8px;
+  animation: scaling 1s infinite 0.4s;
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

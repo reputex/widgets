@@ -26,7 +26,10 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^3.0.0"
+    "@reputex/sdk": "^1.0.4",
+    "@stencil/core": "^3.0.0",
+    "dayjs": "^1.11.8",
+    "moment": "^2.29.4"
   },
   "devDependencies": {
     "@stencil/postcss": "^2.1.0",
