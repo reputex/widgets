@@ -17,7 +17,7 @@ export namespace Components {
         "rectangleTop": string;
     }
     interface ReputexWidget {
-        "apiAcessKey": string;
+        "apiAccessKey": string;
         "apiSecretKey": string;
         "mode": boolean;
         "userAddress": string;
@@ -70,7 +70,7 @@ declare namespace LocalJSX {
         "rectangleTop"?: string;
     }
     interface ReputexWidget {
-        "apiAcessKey"?: string;
+        "apiAccessKey"?: string;
         "apiSecretKey"?: string;
         "mode"?: boolean;
         "userAddress"?: string;

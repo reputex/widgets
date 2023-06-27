@@ -20,7 +20,7 @@ export class ReputexWidget {
 
   @Prop() visibility: boolean
   @Prop() userAddress: string
-  @Prop() apiAcessKey: string
+  @Prop() apiAccessKey: string
   @Prop() apiSecretKey: string
   @Prop() mode: boolean
 
@@ -101,7 +101,7 @@ export class ReputexWidget {
       }
 
       const reputeX = new ReputeXSdk({
-        accessKey: this.apiAcessKey,
+        accessKey: this.apiAccessKey,
         secretKey: this.apiSecretKey,
       });
 
@@ -139,7 +139,7 @@ export class ReputexWidget {
 
  
 
-  async render() {
+  render() {
     return (
       <div>
     {this.visibility &&
