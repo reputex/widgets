@@ -1,6 +1,5 @@
 import { Component, h, Prop, State, Watch } from '@stencil/core';
 import ReputeXSdk from "@reputex/sdk";
-import moment from "moment";
 
 
 // @Component({
@@ -27,18 +26,22 @@ export class ReputexWidget {
   @State() showScoreComponent: boolean = false;
   @State() errorMessage: string = '';
   @State() score: number = 0;
-  @State() timeStamp: Date | undefined;
+  @State() timeStamp?: Date;
+private formattedDate: string = '';
+
   // @State() userAddress: string = '';
   // private apiAcessKey: string = 'your-api-access-key';
   // private apiSecretKey: string = 'your-api-secret-key';
-  private formattedDate: string = '';
+  // private formattedDate: string = '';
 
-  @Watch('timeStamp')
-  calculateFormattedDate(newTimeStamp: Date | undefined) {
-    if (newTimeStamp) {
-      moment(this.timeStamp).fromNow()
-    }
-  }
+  // @Watch('timeStamp')
+  //   FormattedDate(newTimeStamp: Date | undefined) {
+  //   if (newTimeStamp) {
+  //     this.timeStamp.toLocaleDateString()
+  //   }
+  // }
+  
+  
 
   validateDomain(value: string): boolean {
     if (/[a-z0-9-]+\.(?:eth)(?:\.[a-z]{2,3})?/.test(value) === true) {
@@ -115,7 +118,7 @@ export class ReputexWidget {
         scoreData.data?.reputeXScore != null
       ) {
         this.score = scoreData.data?.reputeXScore ?? 550;
-        this.timeStamp = scoreData.data?.lastUpdated ?? new Date();
+        this.timeStamp = (scoreData.data?.lastUpdated ?? new Date());
         this.showScoreComponent = true;
       } else {
         this.showScoreComponent = false;
@@ -134,10 +137,6 @@ export class ReputexWidget {
   componentWillLoad() {
     this.fetchScore();
   }
-
-
-
- 
 
   render() {
     return (

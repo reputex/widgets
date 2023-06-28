@@ -29,11 +29,11 @@ export class ScoreLoaded {
         <div class="outer-div">
           <div class={`flex flex-col relative rounded-md px-4 py-3 h-full mx-auto  ${modeColor} ${textColor} `}>
             {/* score display */}
-            <div class="flex w-[180px] h-[62px]  m-4 rounded-[106px] bg-gradient-to-r from-[#00FFFF] via-[#8A76FF] to-[#FF00FF] text-white">
+            <div class="score-div">
               <div class="m-1">
                <img src={ReputeXLogo}/>
               </div>
-              <p class=" text-[28px] mt-1 ml-1 font-grotesk p-1 text-white">{this.reputeXScore}</p>
+              <p class=" text-[28px] mt-3 ml-1 font-grotesk p-1 text-white">{this.reputeXScore}</p>
               <div class="mt-5 ml-2">
                 <a href="https://reputex.io/" target="_blank" rel="noreferrer">
                 <img src={MaximizeButton}/>
@@ -46,7 +46,7 @@ export class ScoreLoaded {
 
             {/* address display */}
             <div class="p-4">
-              <p>{this.userAddress}</p>
+              <p>{`${this.userAddress.slice(0, 10)}...${this.userAddress.slice(-4)}`}</p>
               <p class="text-[#9B9797]">{this.lastUpdated}</p>
             </div>
 
