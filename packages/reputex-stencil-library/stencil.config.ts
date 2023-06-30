@@ -6,7 +6,7 @@ import autoprefixer from 'autoprefixer';
 import { reactOutputTarget } from '@stencil/react-output-target';
 import { vueOutputTarget } from '@stencil/vue-output-target';
 
-
+const exludingComponents =['asset-line', 'pending-state', 'score-loaded', 'asset-circle-right','asset-maximize','asset-rectangle-left','asset-rectangle-middle','asset-rectangle-right', 'asset-rectangle-top', 'asset-reputex-logo']
 setPluginConfigurationDefaults({
   tailwindConf,
   tailwindCssPath: './src/styles/tailwind.css',
@@ -39,11 +39,12 @@ export const config: Config = {
     reactOutputTarget({
       componentCorePackage: 'reputex-stencil-library',
       proxiesFile: '../reputex-react-widget/lib/components/stencil-generated/index.ts',
-      excludeComponents: ['asset-line', 'pending-state', 'score-loaded'],
+      excludeComponents: exludingComponents,
     }),
     vueOutputTarget({
       componentCorePackage: 'reputex-stencil-library',
       proxiesFile: '../reputex-vue-widget/lib/components.ts',
+      excludeComponents: exludingComponents,
     }),
   ],
 };

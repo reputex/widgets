@@ -1,7 +1,7 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { MyButton, defineCustomElements } from "reputex-react-widget";
+import { ReputexWidget,defineCustomElements } from "reputex-react-widget";
 
 defineCustomElements();
 
@@ -18,7 +18,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <MyButton label="Connect"></MyButton>
+      <ReputexWidget visibility userAddress="0xE2B20608bc14A40532dC1047E9375a9E20E09B9D" apiAccessKey="3aa62ec9-d9e9-49f1-b2b3-d01fa0d8302a" apiSecretKey="23c4d688632493d5a630163a66242b43be84ce113fef92630a3e8ce6682ef5ac" mode></ReputexWidget>
       </div>
     </>
   );

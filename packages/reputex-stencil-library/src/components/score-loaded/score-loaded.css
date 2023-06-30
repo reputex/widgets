@@ -1,19 +1,21 @@
 :host {
   display: block;
+  font-family: sans-serif;
+  letter-spacing: 1px;
 }
 
 .outer-div{
   border-radius: 0.5rem;
   background-image: linear-gradient(to right, #00FFFF, #8A76FF, #FF00FF);
   background-color: #00FFFF;
-  width: 354px;
-  height: 284px;
+  width: 360px;
+  height: 270px;
   padding: 0.2rem;
 }
 
 .score-div{
   display: flex;
-  width: 180px;
+  width: 200px;
   height: 62px;
   margin: 1rem;
   border-radius: 6.625rem;

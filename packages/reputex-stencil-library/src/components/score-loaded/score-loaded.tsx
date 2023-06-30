@@ -1,10 +1,10 @@
-import { Component, Prop, h, getAssetPath } from '@stencil/core';
+import { Component, Prop, h} from '@stencil/core';
 
 @Component({
   tag: 'score-loaded',
   styleUrl: 'score-loaded.css',
   shadow: true,
-  assetsDirs: ['assets'],
+ 
 })
 
 export class ScoreLoaded {
@@ -12,50 +12,58 @@ export class ScoreLoaded {
   @Prop() reputeXScore: number;
   @Prop() userAddress: string;
   @Prop() lastUpdated: string;
-  @Prop() reputeXLogo = "reputexLogo.svg";
-  @Prop() maximizeButton = "maximize.svg";
-  @Prop() line= "line.svg";
+  @Prop() isDid : boolean;
+
+  getAddressForExplorer(){
+    if(!this.isDid) return this.userAddress
+    else{
+      const splitArr = this.userAddress.split(':')
+      return splitArr[splitArr.length -1 ]
+    }
+  }
+
+  getAddressForDisplay(){
+    if(!this.isDid) return `${this.userAddress.slice(0, 10)}...${this.userAddress.slice(-4)}`
+    else return `${this.userAddress.slice(0, 19)}...${this.userAddress.slice(-2)}`
+  }
+
 
   render() {
+   
     const modeColor = this.mode ? 'bg-[#1C1E29]' : 'bg-white';
     const textColor = this.mode ? 'text-white' : 'text-black';
-    // const lineColor = this.mode ? '#fff' : 'black';
-    const ReputeXLogo = getAssetPath(`./assets/${this.reputeXLogo}`)
-    const MaximizeButton = getAssetPath(`./assets/${this.maximizeButton}`)
-    const Line = getAssetPath(`./assets/${this.line}`)
+    const lineColor = this.mode ? '#fff' : 'black';
 
     return (
-      <div class="flex justify-center items-center h-screen">
+      <div class="flex justify-center items-center h-screen" >
         <div class="outer-div">
           <div class={`flex flex-col relative rounded-md px-4 py-3 h-full mx-auto  ${modeColor} ${textColor} `}>
             {/* score display */}
-            <div class="score-div">
+            <div class="score-div flex-row space-x-4 ">
               <div class="m-1">
-               <img src={ReputeXLogo}/>
+               <asset-reputex-logo></asset-reputex-logo>
               </div>
-              <p class=" text-[28px] mt-3 ml-1 font-grotesk p-1 text-white">{this.reputeXScore}</p>
-              <div class="mt-5 ml-2">
+              <p class=" text-[28px] mt-3 p-1 text-white">{this.reputeXScore}</p>
+              <div class="mt-5 ">
                 <a href="https://reputex.io/" target="_blank" rel="noreferrer">
-                <img src={MaximizeButton}/>
+                <asset-maximize></asset-maximize>
                 </a>
               </div>
             </div>
 
-            {/* <Line class="w-[170px] ml-4" /> */}
-            <img src={Line}/>
+            <asset-line class={`w-[170px] ml-4 ${lineColor}`}></asset-line>
 
             {/* address display */}
             <div class="p-4">
-              <p>{`${this.userAddress.slice(0, 10)}...${this.userAddress.slice(-4)}`}</p>
-              <p class="text-[#9B9797]">{this.lastUpdated}</p>
+              <p> {this.getAddressForDisplay()}</p>
+              <p class="text-[#9B9797] mt-2">{this.lastUpdated}</p>
             </div>
 
-            <div class="mt-3 ml-3">
-              {/* TODO: Update the url */}
-              <a href={`http://localhost:3000/explorer?address=${this.userAddress}`}>
+            <div class=" ml-3">
+              <a href={`https://reputex.io/explorer?address=${this.getAddressForExplorer()}`} target="_blank" rel="noreferrer">
                 <button
                   type="button"
-                  class={`rounded-3xl relative inline-flex items-center font-grotesk justify-center p-0.5 cursor-pointer w-60 h-12 mt-1 ml-1 ${modeColor} ${textColor} border-2 border-[#9B9797]`}
+                  class={`rounded-3xl relative inline-flex items-center justify-center p-0.5 cursor-pointer w-60 h-12 mt-1 ml-1 ${modeColor} ${textColor} border-2 border-[#9B9797]`}
                 >
                   Try the Explorer
                 </button>

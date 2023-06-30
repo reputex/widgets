@@ -1,16 +1,6 @@
 import { Component, h, Prop, State} from '@stencil/core';
 import ReputeXSdk from "@reputex/sdk";
 import moment from 'moment';
-
-
-// @Component({
-//   tag: 'pending-state',
-// })
-
-// @Component({
-//   tag: 'score-loaded',
-// })
-
 @Component({
   tag: 'reputex-widget',
   styleUrl: 'reputex-widget.css',
@@ -25,25 +15,10 @@ export class ReputexWidget {
   @Prop() mode: boolean
 
   @State() showScoreComponent: boolean = false;
-  @State() errorMessage: string = '';
+  @State() errorMessage: string = 'score is being updated for this wallet';
   @State() score: number = 0;
   @State() timeStamp?: Date;
   @State() formattedDate: string;
-// private formattedDate: string = '';
-
-  // @State() userAddress: string = '';
-  // private apiAcessKey: string = 'your-api-access-key';
-  // private apiSecretKey: string = 'your-api-secret-key';
-  // private formattedDate: string = '';
-
-  // @Watch('timeStamp')
-  //   FormattedDate(newTimeStamp: Date | undefined) {
-  //   if (newTimeStamp) {
-  //     this.timeStamp.toLocaleDateString()
-  //   }
-  // }
-  
-  
 
   validateDomain(value: string): boolean {
     if (/[a-z0-9-]+\.(?:eth)(?:\.[a-z]{2,3})?/.test(value) === true) {
@@ -139,17 +114,18 @@ export class ReputexWidget {
   
   componentWillLoad() {
     this.fetchScore();
-    this.formatDate();
   }
 
   formatDate() {
     const date = moment(this.timeStamp);
     const formatted = date.format('MMMM DD, YYYY');
-    this.formattedDate = formatted;
+    return formatted;
   }
 
 
   render() {
+   
+
     return (
       <div>
     {this.visibility &&
@@ -157,7 +133,7 @@ export class ReputexWidget {
         <score-loaded
           reputeXScore={Math.trunc(this.score)}
           userAddress={this.userAddress}
-          lastUpdated={this.formattedDate}
+          lastUpdated={this.formatDate()}
           mode={this.mode}
         ></score-loaded>
       ) : (

@@ -6,15 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AssetCircleRight {
+    }
+    interface AssetLine {
+    }
+    interface AssetMaximize {
+    }
+    interface AssetRectangleLeft {
+    }
+    interface AssetRectangleMiddle {
+    }
+    interface AssetRectangleRight {
+    }
+    interface AssetRectangleTop {
+    }
+    interface AssetReputexLogo {
+    }
     interface PendingState {
         "bodyMessage": string;
-        "circleRight": string;
-        "line": string;
         "mode": boolean;
-        "rectangleLeft": string;
-        "rectangleMiddle": string;
-        "rectangleRight": string;
-        "rectangleTop": string;
+    }
+    interface ReputexDidWidget {
+        "apiAccessKey": string;
+        "apiSecretKey": string;
+        "mode": boolean;
+        "userDid": string;
+        "visibility": boolean;
     }
     interface ReputexWidget {
         "apiAccessKey": string;
@@ -24,21 +41,73 @@ export namespace Components {
         "visibility": boolean;
     }
     interface ScoreLoaded {
+        "isDid": boolean;
         "lastUpdated": string;
-        "line": string;
-        "maximizeButton": string;
         "mode": boolean;
-        "reputeXLogo": string;
         "reputeXScore": number;
         "userAddress": string;
     }
 }
 declare global {
+    interface HTMLAssetCircleRightElement extends Components.AssetCircleRight, HTMLStencilElement {
+    }
+    var HTMLAssetCircleRightElement: {
+        prototype: HTMLAssetCircleRightElement;
+        new (): HTMLAssetCircleRightElement;
+    };
+    interface HTMLAssetLineElement extends Components.AssetLine, HTMLStencilElement {
+    }
+    var HTMLAssetLineElement: {
+        prototype: HTMLAssetLineElement;
+        new (): HTMLAssetLineElement;
+    };
+    interface HTMLAssetMaximizeElement extends Components.AssetMaximize, HTMLStencilElement {
+    }
+    var HTMLAssetMaximizeElement: {
+        prototype: HTMLAssetMaximizeElement;
+        new (): HTMLAssetMaximizeElement;
+    };
+    interface HTMLAssetRectangleLeftElement extends Components.AssetRectangleLeft, HTMLStencilElement {
+    }
+    var HTMLAssetRectangleLeftElement: {
+        prototype: HTMLAssetRectangleLeftElement;
+        new (): HTMLAssetRectangleLeftElement;
+    };
+    interface HTMLAssetRectangleMiddleElement extends Components.AssetRectangleMiddle, HTMLStencilElement {
+    }
+    var HTMLAssetRectangleMiddleElement: {
+        prototype: HTMLAssetRectangleMiddleElement;
+        new (): HTMLAssetRectangleMiddleElement;
+    };
+    interface HTMLAssetRectangleRightElement extends Components.AssetRectangleRight, HTMLStencilElement {
+    }
+    var HTMLAssetRectangleRightElement: {
+        prototype: HTMLAssetRectangleRightElement;
+        new (): HTMLAssetRectangleRightElement;
+    };
+    interface HTMLAssetRectangleTopElement extends Components.AssetRectangleTop, HTMLStencilElement {
+    }
+    var HTMLAssetRectangleTopElement: {
+        prototype: HTMLAssetRectangleTopElement;
+        new (): HTMLAssetRectangleTopElement;
+    };
+    interface HTMLAssetReputexLogoElement extends Components.AssetReputexLogo, HTMLStencilElement {
+    }
+    var HTMLAssetReputexLogoElement: {
+        prototype: HTMLAssetReputexLogoElement;
+        new (): HTMLAssetReputexLogoElement;
+    };
     interface HTMLPendingStateElement extends Components.PendingState, HTMLStencilElement {
     }
     var HTMLPendingStateElement: {
         prototype: HTMLPendingStateElement;
         new (): HTMLPendingStateElement;
+    };
+    interface HTMLReputexDidWidgetElement extends Components.ReputexDidWidget, HTMLStencilElement {
+    }
+    var HTMLReputexDidWidgetElement: {
+        prototype: HTMLReputexDidWidgetElement;
+        new (): HTMLReputexDidWidgetElement;
     };
     interface HTMLReputexWidgetElement extends Components.ReputexWidget, HTMLStencilElement {
     }
@@ -53,21 +122,47 @@ declare global {
         new (): HTMLScoreLoadedElement;
     };
     interface HTMLElementTagNameMap {
+        "asset-circle-right": HTMLAssetCircleRightElement;
+        "asset-line": HTMLAssetLineElement;
+        "asset-maximize": HTMLAssetMaximizeElement;
+        "asset-rectangle-left": HTMLAssetRectangleLeftElement;
+        "asset-rectangle-middle": HTMLAssetRectangleMiddleElement;
+        "asset-rectangle-right": HTMLAssetRectangleRightElement;
+        "asset-rectangle-top": HTMLAssetRectangleTopElement;
+        "asset-reputex-logo": HTMLAssetReputexLogoElement;
         "pending-state": HTMLPendingStateElement;
+        "reputex-did-widget": HTMLReputexDidWidgetElement;
         "reputex-widget": HTMLReputexWidgetElement;
         "score-loaded": HTMLScoreLoadedElement;
     }
 }
 declare namespace LocalJSX {
+    interface AssetCircleRight {
+    }
+    interface AssetLine {
+    }
+    interface AssetMaximize {
+    }
+    interface AssetRectangleLeft {
+    }
+    interface AssetRectangleMiddle {
+    }
+    interface AssetRectangleRight {
+    }
+    interface AssetRectangleTop {
+    }
+    interface AssetReputexLogo {
+    }
     interface PendingState {
         "bodyMessage"?: string;
-        "circleRight"?: string;
-        "line"?: string;
         "mode"?: boolean;
-        "rectangleLeft"?: string;
-        "rectangleMiddle"?: string;
-        "rectangleRight"?: string;
-        "rectangleTop"?: string;
+    }
+    interface ReputexDidWidget {
+        "apiAccessKey"?: string;
+        "apiSecretKey"?: string;
+        "mode"?: boolean;
+        "userDid"?: string;
+        "visibility"?: boolean;
     }
     interface ReputexWidget {
         "apiAccessKey"?: string;
@@ -77,16 +172,23 @@ declare namespace LocalJSX {
         "visibility"?: boolean;
     }
     interface ScoreLoaded {
+        "isDid"?: boolean;
         "lastUpdated"?: string;
-        "line"?: string;
-        "maximizeButton"?: string;
         "mode"?: boolean;
-        "reputeXLogo"?: string;
         "reputeXScore"?: number;
         "userAddress"?: string;
     }
     interface IntrinsicElements {
+        "asset-circle-right": AssetCircleRight;
+        "asset-line": AssetLine;
+        "asset-maximize": AssetMaximize;
+        "asset-rectangle-left": AssetRectangleLeft;
+        "asset-rectangle-middle": AssetRectangleMiddle;
+        "asset-rectangle-right": AssetRectangleRight;
+        "asset-rectangle-top": AssetRectangleTop;
+        "asset-reputex-logo": AssetReputexLogo;
         "pending-state": PendingState;
+        "reputex-did-widget": ReputexDidWidget;
         "reputex-widget": ReputexWidget;
         "score-loaded": ScoreLoaded;
     }
@@ -95,7 +197,16 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "asset-circle-right": LocalJSX.AssetCircleRight & JSXBase.HTMLAttributes<HTMLAssetCircleRightElement>;
+            "asset-line": LocalJSX.AssetLine & JSXBase.HTMLAttributes<HTMLAssetLineElement>;
+            "asset-maximize": LocalJSX.AssetMaximize & JSXBase.HTMLAttributes<HTMLAssetMaximizeElement>;
+            "asset-rectangle-left": LocalJSX.AssetRectangleLeft & JSXBase.HTMLAttributes<HTMLAssetRectangleLeftElement>;
+            "asset-rectangle-middle": LocalJSX.AssetRectangleMiddle & JSXBase.HTMLAttributes<HTMLAssetRectangleMiddleElement>;
+            "asset-rectangle-right": LocalJSX.AssetRectangleRight & JSXBase.HTMLAttributes<HTMLAssetRectangleRightElement>;
+            "asset-rectangle-top": LocalJSX.AssetRectangleTop & JSXBase.HTMLAttributes<HTMLAssetRectangleTopElement>;
+            "asset-reputex-logo": LocalJSX.AssetReputexLogo & JSXBase.HTMLAttributes<HTMLAssetReputexLogoElement>;
             "pending-state": LocalJSX.PendingState & JSXBase.HTMLAttributes<HTMLPendingStateElement>;
+            "reputex-did-widget": LocalJSX.ReputexDidWidget & JSXBase.HTMLAttributes<HTMLReputexDidWidgetElement>;
             "reputex-widget": LocalJSX.ReputexWidget & JSXBase.HTMLAttributes<HTMLReputexWidgetElement>;
             "score-loaded": LocalJSX.ScoreLoaded & JSXBase.HTMLAttributes<HTMLScoreLoadedElement>;
         }

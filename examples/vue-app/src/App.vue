@@ -11,7 +11,7 @@
     </a>
 
     <div class="">
-      <my-button label="Custom Button"></my-button>
+      <reputex-widget visibility user-address="0xE2B20608bc14A40532dC1047E9375a9E20E09B9D" api-access-key="3aa62ec9-d9e9-49f1-b2b3-d01fa0d8302a" api-secret-key="23c4d688632493d5a630163a66242b43be84ce113fef92630a3e8ce6682ef5ac" mode></reputex-widget>
     </div>
   </div>
 </template>

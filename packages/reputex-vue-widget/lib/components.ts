@@ -8,7 +8,11 @@ import type { JSX } from 'reputex-stencil-library';
 
 
 
-export const MyButton = /*@__PURE__*/ defineContainer<JSX.MyButton>('my-button', undefined, [
-  'label'
+export const ReputexWidget = /*@__PURE__*/ defineContainer<JSX.ReputexWidget>('reputex-widget', undefined, [
+  'visibility',
+  'userAddress',
+  'apiAccessKey',
+  'apiSecretKey',
+  'mode'
 ]);
 

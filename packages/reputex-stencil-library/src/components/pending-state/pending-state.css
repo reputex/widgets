@@ -1,13 +1,15 @@
 :host {
   display: block;
+  font-family: sans-serif;
+  letter-spacing: 1px;
 }
 
 .outer-div-p{
   border-radius: 0.5rem;
   background-image: linear-gradient(to right, #00FFFF, #8A76FF, #FF00FF);
   background-color: #00FFFF;
-  width: 354px;
-  height: 284px;
+  width: 360px;
+  height: 270px;
   padding: 0.2rem;
 }
 
