@@ -17,6 +17,7 @@
 
 ### Used by
 
+ - [reputex-did-widget](../reputex-did-widget)
  - [reputex-widget](../reputex-widget)
 
 ### Depends on
@@ -37,6 +38,7 @@ graph TD;
   pending-state --> asset-rectangle-left
   pending-state --> asset-rectangle-middle
   pending-state --> asset-rectangle-right
+  reputex-did-widget --> pending-state
   reputex-widget --> pending-state
   style pending-state fill:#f9f,stroke:#333,stroke-width:4px
 ```

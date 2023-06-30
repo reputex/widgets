@@ -133,7 +133,7 @@ export class ReputexWidget {
         <score-loaded
           reputeXScore={Math.trunc(this.score)}
           userAddress={this.userAddress}
-          lastUpdated={this.formatDate()}
+          lastUpdated={`Last updated ${this.formatDate()}`}
           mode={this.mode}
         ></score-loaded>
       ) : (

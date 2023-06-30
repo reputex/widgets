@@ -94,7 +94,7 @@ export class ReputexDidWidget {
       <div>
         {this.visibility &&
           (this.showScoreComponent ? (
-            <score-loaded reputeXScore={Math.trunc(this.score)} userAddress={this.userDid} lastUpdated={this.formatDate()} mode={this.mode} isDid></score-loaded>
+            <score-loaded reputeXScore={Math.trunc(this.score)} userAddress={this.userDid} lastUpdated={`Last updated ${this.formatDate()}`} mode={this.mode} isDid></score-loaded>
           ) : (
             <pending-state body-message={this.errorMessage} mode={this.mode}></pending-state>
           ))}

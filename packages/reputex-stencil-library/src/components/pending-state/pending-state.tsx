@@ -32,7 +32,7 @@ export class PendingState {
 
               {/* <!-- address display --> */}
               <div>
-                <p class="whitespace-normal truncate p-5 text-sm">{this.bodyMessage}</p>
+                <p class="whitespace-normal truncate p-5 text-sm text-left">{this.bodyMessage}</p>
               </div>
               <div class="flex ml-2">
                 <div class="rectangleLeft">

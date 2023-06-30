@@ -7,4 +7,5 @@ import type { JSX } from 'reputex-stencil-library';
 
 
 
+export const ReputexDidWidget = /*@__PURE__*/createReactComponent<JSX.ReputexDidWidget, HTMLReputexDidWidgetElement>('reputex-did-widget');
 export const ReputexWidget = /*@__PURE__*/createReactComponent<JSX.ReputexWidget, HTMLReputexWidgetElement>('reputex-widget');
