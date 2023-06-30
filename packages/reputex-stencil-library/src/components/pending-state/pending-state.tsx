@@ -15,7 +15,7 @@ export class PendingState {
   @Prop() rectangleLeft = 'rectangleLeft.svg';
   @Prop() rectangleMiddle = 'rectangleMiddle.svg';
   @Prop() rectangleRight = 'rectangleRight.svg';
-  @Prop() line = 'line.svg';
+  // @Prop() line = 'line.svg';
 
   render() {
     const modeColor = this.mode ? 'bg-[#1C1E29]' : 'bg-white';
@@ -26,7 +26,7 @@ export class PendingState {
     const RectangleLeft = getAssetPath(`./assets/${this.rectangleLeft}`);
     const RectangleMiddle = getAssetPath(`./assets/${this.rectangleMiddle}`);
     const RectangleRight = getAssetPath(`./assets/${this.rectangleRight}`);
-    const Line = getAssetPath(`./assets/${this.line}`);
+    // const Line = getAssetPath(`./assets/${this.line}`);
     return (
       <div>
         <div class="flex justify-center items-center h-screen">
@@ -38,7 +38,8 @@ export class PendingState {
                 
               </div>
 
-              <img src={Line} alt="line" class={`w-[170px] ml-4 ${lineColor}`}  />
+              {/* <img src={Line} alt="line" class={`w-[170px] ml-4 ${lineColor}`}  /> */}
+              <asset-line class={`w-[170px] ml-4 ${lineColor}`}></asset-line>
 
               {/* <!-- address display --> */}
               <div>

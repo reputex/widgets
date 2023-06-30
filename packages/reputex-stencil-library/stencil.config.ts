@@ -27,7 +27,7 @@ export const config: Config = {
       esmLoaderPath: '../loader',
     },
     {
-      type: 'dist-custom-elements',
+      type: 'dist-custom-elements'
     },
     {
       type: 'docs-readme',
@@ -39,6 +39,7 @@ export const config: Config = {
     reactOutputTarget({
       componentCorePackage: 'reputex-stencil-library',
       proxiesFile: '../reputex-react-widget/lib/components/stencil-generated/index.ts',
+      excludeComponents: ['asset-line', 'pending-state', 'score-loaded'],
     }),
     vueOutputTarget({
       componentCorePackage: 'reputex-stencil-library',
