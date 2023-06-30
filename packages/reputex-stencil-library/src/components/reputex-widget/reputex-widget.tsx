@@ -1,5 +1,6 @@
-import { Component, h, Prop, State, Watch } from '@stencil/core';
+import { Component, h, Prop, State} from '@stencil/core';
 import ReputeXSdk from "@reputex/sdk";
+import moment from 'moment';
 
 
 // @Component({
@@ -27,7 +28,8 @@ export class ReputexWidget {
   @State() errorMessage: string = '';
   @State() score: number = 0;
   @State() timeStamp?: Date;
-private formattedDate: string = '';
+  @State() formattedDate: string;
+// private formattedDate: string = '';
 
   // @State() userAddress: string = '';
   // private apiAcessKey: string = 'your-api-access-key';
@@ -134,9 +136,18 @@ private formattedDate: string = '';
     }
   }
 
+  
   componentWillLoad() {
     this.fetchScore();
+    this.formatDate();
   }
+
+  formatDate() {
+    const date = moment(this.timeStamp);
+    const formatted = date.format('MMMM DD, YYYY');
+    this.formattedDate = formatted;
+  }
+
 
   render() {
     return (
