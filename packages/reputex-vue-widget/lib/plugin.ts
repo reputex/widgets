@@ -1,5 +1,5 @@
 import { Plugin } from 'vue';
-import { applyPolyfills, defineCustomElements } from 'reputex-stencil-library/loader';
+import { applyPolyfills, defineCustomElements } from '@reputex/stencil-library/loader';
 
 export const ComponentLibrary: Plugin = {
   async install() {

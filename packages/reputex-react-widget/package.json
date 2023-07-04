@@ -1,18 +1,22 @@
 {
-  "name": "reputex-react-widget",
-  "version": "0.0.1",
-  "description": "> TODO: description",
-  "author": "avk <aditya@nordfinance.io>",
-  "homepage": "",
+  "name": "@reputex/react-widget",
+  "version": "1.0.1",
+  "description": "React widget by the ReputeX team for displaying ReputeX scores of users.",
+  "author": "ReputeX",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/reputex/widgets/issues"
+  },
+  "homepage": "https://github.com/reputex/widgets#readme",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
+    "lib",
     "dist"
   ],
   "publishConfig": {
@@ -24,12 +28,18 @@
     "tsc": "tsc -p ."
   },
   "dependencies": {
-    "reputex-stencil-library": "*"
+    "@reputex/stencil-library": "^0.0.11"
   },
   "devDependencies": {
     "@types/react": "^18.2.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.1.3"
-  }
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "reputation",
+    "credit-score"
+  ]
 }
