@@ -1,3 +1,4 @@
+
 # ReputeX Vue Widget
 ## Features
 ​
@@ -6,20 +7,17 @@
 -   Fully  **Typescript**  ready out-of-the box.
 ​
 ​
-## ��  Quick start
+## 🚀 Quick start
 ​
 If you're new to ReputeX, check the [quickstart guide in the official docs](https://docs.reputex.io/) on how to get started.
 ​
 ## Reputex Vue Widget Installation
 ​
-​
-​
 ### 1. Install ReputeX Vue Widget
-​
-1.  Open your terminal or command prompt.
-2.  Navigate to your project directory.
-3.  Install ReputeX React Widget:
-    -   Install the package via `npm`:
+- Open your terminal or command prompt.
+- Navigate to your project directory.
+- Install ReputeX React Widget:
+    -   Install the package via npm:
 	     `npm i @reputex/vue-widget`
 	 - or yarn:
 		 `yarn add @reputex/vue-widget`
@@ -28,21 +26,19 @@ If you're new to ReputeX, check the [quickstart guide in the official docs](http
 ​
 After your dependency is added, you simply need to import and initialize ReputeXWidget.
 ​
- 1. In your Vue component file (e.g., `main.js` or `main.ts`), import the ReputeXWidget component from the package:
-​
-        import { ComponentLibrary } from  "@reputex/vue-widget";
-​
- 2. Create a Vue app instance and use the ReputeXWidget component as a plugin:
-​
-   
-​
+ - In your Vue component file (e.g., `main.js` or `main.ts`), import the ReputeXWidget component from the package:
+    
+    ```
+    import { ComponentLibrary } from  "@reputex/vue-widget";
+    ```
+- Create a Vue app instance and use the ReputeXWidget component as a plugin:
+   ```
         import { createApp } from "vue"; 
         import App from "./App.vue";
         createApp(App).use(ComponentLibrary).mount("#app");
-​
- 3. To consume the ReputeX widget in your Vue.js application, you can use the following code:
- 
-​
+	```
+- To consume the ReputeX widget in your Vue.js application, you can use the following code:
+   	```
         <reputex-widget 
 	        visibility 
 	        user-address="user-address" 
@@ -50,14 +46,14 @@ After your dependency is added, you simply need to import and initialize ReputeX
 	        api-secret-key="your-api secret-key" 
 	        mode>
         </reputex-widget>
-​
+    ```
 ​
 ## Reputex Nuxt Widget Installation
-## 1. Install ReputeX Vue Widget
+### 1. Install ReputeX Vue Widget
 ​
-1.  Open your terminal or command prompt.
-2.  Navigate to your project directory.
-3.  Install ReputeX React Widget:
+-  Open your terminal or command prompt.
+-  Navigate to your project directory.
+-  Install ReputeX React Widget:
     -   Install the package via `npm`:
 	     `npm i @reputex/vue-widget`
 	 - or yarn:
@@ -67,19 +63,21 @@ After your dependency is added, you simply need to import and initialize ReputeX
 ​
 After your dependency is added, you simply need to import and initialize ReputeXWidget.
 ​
- 1. Create a new file called `reputex-plugin.js` inside the `plugins` directory of your Nuxt.js project. In that file, add the following code:
-​
+ - Create a new file called `reputex-plugin.js` inside the `plugins` directory of your Nuxt.js project. In that file, add the following code:
+    ```
         import Vue from 'vue' 
         import { ComponentLibrary } from "@reputex/vue-widget"
         Vue.use(ComponentLibrary)
+    ```
 ​
 ​
- 2. In your Nuxt.js application, open the `nuxt.config.js` file and add the provided code to the plugins section of the file.
-​
-        plugins: [{ src: '~/plugins/reputex-plugin.js', mode: 'client' }]
+ - In your Nuxt.js application, open the `nuxt.config.js` file and add the provided code to the plugins section of the file.
+ 	```
+  	plugins: [{ src: '~/plugins/reputex-plugin.js', mode: 'client' }]
+   	```
         
- 3. To consume the ReputeX widget in your Nuxt.js application, you can use the following code:
-​
+ - To consume the ReputeX widget in your Nuxt.js application, you can use the following code:
+    	```
         <reputex-widget 
 	        visibility 
 	        user-address="user-address" 
@@ -87,7 +85,7 @@ After your dependency is added, you simply need to import and initialize ReputeX
 	        api-secret-key="your-api secret-key" 
 	        mode>
         </reputex-widget>
-        
+	```        
 ​
 ## Integration Instructions for ReputeX Widget
 1.  Replace 'your-apiAcessKey', 'your-apiSecretKey', and 'user-address' with your own values.
@@ -101,15 +99,17 @@ That's it! You can now use the ReputeX widget in your project. If you have any q
 ​
 In some cases, when using Vite for your application, you may encounter a common issue related to the "504 (Outdated Optimize Dep)" error. To address this, you can modify the `vite.config.js` file by adding the following configuration:
 1.  Import the `defineConfig` function from "vite":
-​
+   	```
 		import { defineConfig } from "vite";
+    ```
 ​
-2.  Update the default export to use `defineConfig` and include the `optimizeDeps` property:
-​
+2.  Update the default export to use `defineConfig` and include the `optimizeDeps` property:​
+```
 		export default defineConfig({ 
 		// ...
 		optimizeDeps: {
 		exclude: ['@reputex/vue-widget']
 		}
 		});
+  ```
    
