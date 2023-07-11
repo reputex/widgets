@@ -77,7 +77,7 @@ After your dependency is added, you simply need to import and initialize ReputeX
    	```
         
  - To consume the ReputeX widget in your Nuxt.js application, you can use the following code:
-    	```
+   ```
         <reputex-widget 
 	        visibility 
 	        user-address="user-address" 
@@ -85,7 +85,7 @@ After your dependency is added, you simply need to import and initialize ReputeX
 	        api-secret-key="your-api secret-key" 
 	        mode>
         </reputex-widget>
-	```        
+   ```        
 ​
 ## Integration Instructions for ReputeX Widget
 1.  Replace 'your-apiAcessKey', 'your-apiSecretKey', and 'user-address' with your own values.
